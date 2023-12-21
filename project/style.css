@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Kajiro;
+    src: url(KajiroBold.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family : "gilroy";
+    box-sizing: border-box;
+}
+
+html, body{
+    width : 100%;
+    height : 100vh;
+    /* background-color: black; */
+}
+
+#back{
+    width : 100%;
+    height : 100%;
+}
+
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*it will make sure img will cover whole screen*/
+}
+
+#top{
+    pointer-events: none; /*it will not allow to click on top*/
+    position: absolute; /*top is going to be above the back inside main*/
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100vh;
+    /* background-color: black; */
+}
+
+#workingarea{
+    position: relative;
+    margin : 0 auto;
+    width : 80%;
+    height : 100vh;
+    max-width: 1920px;
+    /* border: 1px solid red; */
+    /* background-color: grey; */
+
+}
+
+#nav{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav img{
+    height: 60px;
+}
+
+#nleft, #nright{
+    display: flex;
+    align-items: center;
+    gap : 40px;
+}
+
+#nav a{
+    pointer-events: all; /*we have set pointer-events:none in the tag #top to allow click overnavbar we have
+                         set pointer-event: all here*/
+    text-decoration: none;
+    text-transform: uppercase;
+    color : #fff;
+    /* font-family: "gilroy"; */
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#hero{
+    position: absolute; /*make it parent(# working area) position relative, otherwise it will not work*/
+    top : 50%;
+    left : 0;
+    transform: translate(0%, -50%); /*position, top, left, transform will make the div to come in center*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: white; */
+}
+
+#heroleft{
+    min-width: 50%;
+    /* height: 100px; */
+    /* background-color: orange; */
+}
+
+#heroleft .elem{
+    position: relative;
+    height: 8vw;
+    overflow: hidden; /*it hides the other text, in the element class*/
+}
+
+#heroleft .elem h1:nth-child(1) { /*to apply changing text effect*/
+    top : 0;
+
+}
+
+#heroleft .elem h1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: .9;
+    font-family: "Kajiro";
+    font-weight: 100;
+    color: #fff;
+    font-size: 10vw;
+} 
+
+#heroleft button{
+    pointer-events: all;
+    padding: 0.8vw 1.6vw;
+    font-family: "Kajiro";
+    font-size: 3vw;
+    margin-top: 2vw;
+}
+
+#heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    width: 25%;
+    /* height: 100px; */
+    /* background-color: green; */
+}
+
+#heroright p{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+}
+
+#heroright #imagediv{
+    width : 75%;
+    height: 300px;
+    margin-top : 20px;
+    margin-bottom: 30px;
+    background-image: url(https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#heroright p:nth-child(3){  /*paragraph 2 and 3 child*/
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
