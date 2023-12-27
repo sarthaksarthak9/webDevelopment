@@ -1,7 +1,7 @@
 const express = require('express') //express get all power of 'express' module
 const app = express() // () it basically run the variable express
 
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //we have to set view engine and ejs as extension
 
 app.use(express.static("./public"));
 
